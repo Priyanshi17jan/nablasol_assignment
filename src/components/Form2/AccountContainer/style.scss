@@ -1,0 +1,224 @@
+@use "../../../scss/variables" as v;
+
+.account-container-box {
+  padding-bottom: 45px;
+  margin-top: 45px;
+  border-radius: 25px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+  background: v.$white;
+
+  .step-counter {
+    display: block;
+    color: #999;
+    text-align: center;
+  }
+
+  .tab {
+    .step-count {
+      background: v.$gray30;
+      padding: 1px 5px;
+      border-radius: 100%;
+      color: v.$white;
+      font-size: 11px;
+      margin-right: 4px;
+
+      @media only screen and (max-width: v.$md) {
+        display: none;
+      }
+    }
+    &.active {
+      .step-count {
+        background: v.$white;
+        padding: 1px 5px;
+        border-radius: 100%;
+        color: v.$dodger-blue;
+        font-size: 11px;
+        margin-right: 4px;
+
+        @media only screen and (max-width: v.$md) {
+          display: none;
+        }
+      }
+    }
+  }
+
+
+
+  p{
+    &.instructions {
+      width: 58%;
+      margin: 10px auto 35px;
+      color: v.$gray30;
+      text-align: center;
+      font-size: 18px;
+      line-height: 25px;
+
+      @media only screen and (max-width: v.$sm) {
+        width: 85%;
+        font-size: 13px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  .form {
+    max-width: 600px;
+    margin: 0 auto;
+
+    .row {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      column-gap: 40px;
+
+      @media only screen and (max-width: v.$md) {
+        flex-direction: column;
+        row-gap: 10px;
+      }
+    }
+
+    .hide {
+      visibility: hidden;
+    }
+    
+    .input-group {
+      flex: 0 0 48%;
+    }
+    
+    label {
+      margin-bottom: 12px;
+      display: block;
+      color: v.$gray30;
+      @media only screen and (max-width: v.$md) {
+        margin-top: 10px;
+      }
+      @media only screen and (max-width: v.$sm) {
+        line-height: 22px;
+        font-size: 14px;    
+      }
+    }
+    
+    input {
+      width: 90%;
+      padding: 8px 0 8px 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      color: v.$gray30;
+    
+      &::placeholder {
+        color: #bfbfbf;
+        font-size: 14px;
+      }
+    
+      &[type="submit"] {
+        width: 100%;
+        padding: 11px 11px 11px 0;
+        background-color: v.$slateBlue;
+        color: white;
+
+        &:hover {
+          background-color: #9180ee ;
+        }
+      }
+      @media only screen and (max-width: v.$md) {
+        padding: 8px 9px 8px 20px;
+      }
+      
+      @media only screen and (max-width: v.$sm) {
+        padding: 8px 13px 8px 7px;
+      }
+    }
+
+    .account-step-navigation {
+      width: 30%;
+      display: flex;
+      column-gap: 15px;
+      position: absolute;
+      right: 0;
+      bottom: -9%;
+
+      input,input.prev-step-btn {
+        font-size: 12px;
+        cursor: pointer;
+        @media only screen and (max-width: v.$lg) {
+          padding: 11px 25px 11px;
+        }
+
+        @media only screen and (max-width: v.$sm) {
+          padding: 11px 15px 11px;
+        }
+
+      }
+
+      .prev-step-btn {
+        width: 100%;
+        padding: 11px 0 11px 18px;
+        background-color: v.$white;
+        color: #6495ed;
+
+        &:hover {
+          background-color: #f0f8ff;
+        }
+      }
+
+      .right-arrow-icon,.left-arrow-icon {
+        position: absolute;
+        right: 6%;
+        top: 24%;
+        color: v.$white;
+        font-size: 19px;
+      }
+
+      .left-arrow-icon {
+        left: 3%;
+        color: #6495ed;
+        @media only screen and (max-width: v.$sm) {
+          top: 33%;
+          left: 14%;
+        }
+      }
+
+      .right-arrow-icon {
+        @media only screen and (max-width: v.$lg) {
+          right: -10%;
+        }
+
+        @media only screen and (max-width: v.$md) {
+          top: 26%;
+          right: -15%;
+        }
+
+        @media only screen and (max-width: v.$sm) {
+          right: -110%;
+        } 
+      }
+      @media only screen and (max-width: v.$lg) {
+        right: 3%;
+      }
+
+      @media only screen and (max-width: v.$md) {
+        right: 7%;
+      }
+
+      @media only screen and (max-width: v.$sm) {
+        padding: 11px 18px 11px;
+        right: 29%;
+      }
+    }
+    
+    .error {
+      color: red;
+      font-size: 13px;
+    }
+    
+    @media only screen and (max-width: v.$md) {
+      max-width: 300px;
+    }
+
+    @media only screen and (max-width: v.$sm) {
+      max-width: 250px;
+    }
+  }
+  
+}
+

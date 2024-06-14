@@ -1,0 +1,51 @@
+@use "../../scss/variables" as v;
+
+.footer {
+  padding: 20px;
+  margin-top: 100px;
+  color: v.$white;
+  
+  .wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @media only screen and (max-width: v.$sm) {
+      flex-direction: column;
+      row-gap: 10px;
+    }
+  }
+
+  .social-icons {
+    flex-basis: 6%;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      color: v.$slateBlue;
+      font-size: 20px;
+      &:hover {
+        color: #e6e3e3;
+      }
+    }
+    @media only screen and (max-width: v.$xxl) {
+      flex-basis: 10%;
+    }
+
+    @media only screen and (max-width: v.$md) {
+      flex-basis: 15%;
+    }
+
+    @media only screen and (max-width: v.$sm) {
+      width: 22%;
+    }
+  }
+
+  p.copyright-text {
+    color: v.$slateBlue;
+    @media only screen and (max-width: v.$xsm) {
+      font-size: 14px;
+    }
+  }
+
+}

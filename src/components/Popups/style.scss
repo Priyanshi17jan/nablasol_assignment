@@ -1,0 +1,62 @@
+@use "../../scss/variables" as v;
+.register-success,.project-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  padding: 40px;
+  border-radius: 13px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background-color: lightgray;
+
+  h2 {
+    color: v.$black;
+    font-size: 25px;
+    @media only screen and (max-width: v.$md) {
+      font-size: 13px;
+    }
+  }
+  
+  a {
+    color: #6495ed;
+    &:hover {
+      text-decoration: none;
+    }
+    @media only screen and (max-width: v.$sm) {
+      font-size: 12px;
+    }
+  }
+
+  svg {
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    cursor: pointer;
+  }
+  p {
+    @media only screen and (max-width: v.$md) {
+      font-size: 11px;
+    }
+
+    @media only screen and (max-width: v.$sm) {
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+}
+
+.project-info {
+  p {
+    color: #dc143c;
+    span {
+      color: v.$black;
+    }
+    @media only screen and (max-width: v.$sm) {
+      white-space: nowrap;
+    }
+  }
+}

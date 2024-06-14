@@ -1,0 +1,51 @@
+@use "../../../scss/variables" as v;
+
+.tabs {
+  margin-bottom: 30px;
+  display: flex;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  overflow: hidden;
+  background-color: #d9d8d7;
+  
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px 5px 0 0;
+
+  li {
+    padding: 5px 0;
+    color: v.$white;
+  }
+
+  &.active {
+    display: flex;
+    background: linear-gradient(to right, #add8e6, #5390D9);
+    border-radius: 0 50px 50px 0;
+
+  li {
+    flex-grow: 1;
+    text-align: center;
+    list-style: none;
+  }
+  }
+
+  &.flex-grow {
+    flex: 2;
+  }
+
+  &:not(.active) {
+    padding-top: 14px;
+    opacity: 0.4;
+  }
+}
+}
+
+
+
+
+
+

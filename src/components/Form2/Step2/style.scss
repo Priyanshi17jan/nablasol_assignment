@@ -1,0 +1,21 @@
+@use "../../../scss/variables" as v;
+.account-container-box {
+  .form {
+    .account-step-navigation {
+      .prev-step-btn {
+        @media only screen and (max-width: 1300px) {
+          padding: 11px 13px 11px 18px!important;
+        }
+        @media only screen and (max-width: v.$sm) {
+          font-size: 11px!important;
+        }
+      }
+
+      .left-arrow-icon {
+        @media only screen and (max-width: 1300px) {
+          font-size: 17px!important;
+        }
+      }
+    } 
+  } 
+}

@@ -1,0 +1,96 @@
+@use "../../../../scss/variables" as v;
+.form-container {
+  .form-row {
+    display: flex;
+    column-gap: 40px;
+
+    @media only screen and (max-width: v.$sm) {
+      flex-direction: column;
+      row-gap: 10px;
+    }
+  }
+
+  h3,.back-to-login {
+    color: #6495ed;
+  }
+
+  h3 {
+    @media only screen and (max-width: v.$sm) {
+      text-align: center;
+    }
+  }
+
+  .form-section-title {
+    margin-bottom: 15px;
+  }
+
+  .right-icon-btn {
+    padding-top: 4px;
+    border: none;
+    border-radius: 5px;
+    background-color: v.$slateBlue;
+
+    svg {
+      color: v.$white;
+      font-size: 21px;
+    }
+  }
+
+  .document-field-content {
+    margin-bottom: 15px;
+    display: flex;
+    column-gap: 20px;
+    position: relative;
+
+    .green-check {
+      position: absolute;
+      right: 10%;
+      top: 27%;
+      color: #008000;
+      font-size: 15px;
+      @media only screen and (max-width: v.$md) {
+        top: 15%;
+        right: -7%;
+      }
+      @media only screen and (max-width: v.$sm) {
+        top: 17%;
+        right: -6%;
+      }
+    }
+
+    @media only screen and (max-width: v.$md) {
+      flex-direction: column;
+    }
+  }
+
+  .brand-type-section {
+    position: relative;
+    label {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+
+      svg {
+        &:hover + .hover-pop-up {
+          visibility: visible;
+        }
+      }
+    }
+
+    .hover-pop-up {
+      width: 100%;
+      padding: 10px;
+      position: absolute;
+      top: 0%;
+      right: -50%;
+      display: flex;
+      visibility: hidden;
+      flex-direction: column;
+      row-gap: 20px;
+      background-color:rgba(0, 0, 0, 0.8);;
+      color: v.$white;
+      font-size: 14px;
+      line-height: 25px;
+    }
+  }
+}

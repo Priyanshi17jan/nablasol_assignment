@@ -1,0 +1,9 @@
+@use "../../../../scss/variables" as v;
+.input-group {
+  position: relative;
+
+  .error {
+    left: 0;
+    bottom: -40%; 
+  }
+}

@@ -1,0 +1,227 @@
+@use "../../scss/variables" as v;
+
+.form-one {
+  width: 25%;
+  height: 550px;
+  padding: 2% 4%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  transform: translate(-50%,-50%);
+  overflow: scroll;
+  background-color: v.$white;
+  font-family: Arial, sans-serif;
+
+  svg.close-icon {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    cursor: pointer;
+  }
+
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    div {
+      margin-bottom: 17px;
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        color: v.$gray30;
+        font-weight: bold;
+        font-size: 15px;
+
+        &.end-date-label {
+          visibility: hidden;
+        }
+      }
+
+      input[type='text'],
+      input[type='date'],
+      select {
+        width: 95%;
+        padding: 7px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        color: v.$gray30;
+      }
+
+      input[type='date'] {
+        width: 92%;
+        display: flex;
+        flex-direction: row-reverse;
+        column-gap: 5px;
+        @media only screen and (max-width: v.$xsm) {
+          width: 78%;
+        }
+      }
+
+      .error {
+        color: red;
+        font-size: 13px;
+        margin-top: 10px;
+      }
+
+      &.add-client-content {
+        margin-bottom: 3px;
+      }
+    }
+
+    input[type='submit'] {
+      background-color: v.$dodger-blue;
+      color: v.$white;
+      padding: 9px 27px;
+      margin: 20px auto 0;
+      display: block;
+      border-radius: 4px;
+      border: none;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      font-size: 12px;
+
+      &:hover {
+        background-color: v.$cobalt;
+      }
+    }
+
+    p {
+      margin-bottom: 32px;
+      color: #5f5f5f;
+      font-size: 13px;
+      line-height: 20px;
+    }
+
+    button {
+      border: 1px solid #ccc;
+      background-color: transparent;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      color: v.$black;
+      font-size: 14px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: v.$cobalt;
+      }
+    }
+
+    .client-fields {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+      color: #bfbfbf;
+      button {
+        padding: 10px 11px;
+        color: v.$gray30;
+        border: 1px solid #ccc;
+        background-color: transparent;
+        white-space: nowrap;
+
+        &:hover {
+          background-color: v.$cobalt;
+          color: v.$white;
+        }
+      }
+    }
+
+    .dates-section {
+      display: flex;
+      column-gap: 25px;
+
+      div {
+        flex: 1;
+      }
+
+      .date-range-symbol {
+        position: absolute;
+        top: 50%;
+        right: -8%;
+        color: #bfbfbf;
+        @media only screen and (max-width: v.$lg) {
+          right: -11%;
+        }
+
+        @media only screen and (max-width: v.$lg) {
+          right: -8%;
+        }
+
+        @media only screen and (max-width: v.$xsm) {
+          right: 3%;
+        }
+      }
+      @media only screen and (max-width: v.$sm) {
+        column-gap: 3px;
+      }
+    }
+
+    textarea {
+      width: 95%;
+      padding: 10px;
+      border: 1px solid #bfbfbf;
+
+      @media only screen and (max-width: v.$sm) {
+        width: 88%;
+        margin: 11px auto 0;
+        display: block;
+      }
+    }
+  }
+
+  .back-button {
+    position: absolute;
+    left: 0;
+    color: v.$gray30;
+    cursor: pointer;
+
+    &:hover {
+      color: v.$black;
+    }
+  }
+
+  .container-selection {
+    & + .back-button {
+      left: -10%;
+    }
+  }
+
+  .form-fields {
+    position: relative;
+  }
+
+  @media only screen and (max-width: v.$xl) {
+    width: 40%;
+    top: 35%;
+  }
+
+  @media only screen and (max-width: v.$md) {
+    width: 80%;
+    top: 35%;
+  }
+
+  @media only screen and (max-width: v.$sm) {
+    padding: 25px 35px;
+    top: 38%;
+  }
+
+  @media only screen and (max-width: v.$xsm) {
+    width: 75%;
+    top: 55%;
+  }
+}
+
+.hidden {
+  display: none;
+}

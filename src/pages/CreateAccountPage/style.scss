@@ -1,0 +1,44 @@
+@use "../../scss/variables" as v;
+
+.create-account-container {
+  width: 60%;
+  margin: auto;
+  position: relative;
+
+    h2 {
+      margin-top: 15px;
+      color: v.$white;
+      font-size: 22px;
+      font-family: sans-serif;
+      text-align: center;
+
+      &.profile-form-title {
+        color: v.$gray30;
+        font-size: 23px;
+      }
+    }
+
+    .back-to-login {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      bottom: -8%;
+      left: 0;
+      color: v.$dodger-blue;
+      font-size: 16px;
+      transition: all 0.6 ease-in-out;
+  
+      &:hover {
+        text-decoration: none;
+      }
+
+      @media only screen and (max-width: v.$sm) {
+        bottom: -7%;
+        font-size: 13px;
+      }
+    }
+
+  @media only screen and (max-width: v.$xl) {
+    width: 90%;
+  }
+}
